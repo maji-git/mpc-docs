@@ -61,3 +61,7 @@ Just single-player, all alone.
 **Tip**
 All mode starts a multiplayer server, so you can use Godot's `rpc` function natively.
 {{< /hint >}}
+
+Here's a video showing how each play mode works.
+
+{{< youtube SgJF4xd3QTE >}}
