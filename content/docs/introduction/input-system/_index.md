@@ -5,6 +5,8 @@ title: "Input System"
 
 # Input System
 
+![Banner](assets/banner.png)
+
 MultiPlay’s input system turns the input action into its input action. Each behaves differently according to the play mode.
 
 ## Using the Input System
