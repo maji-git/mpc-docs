@@ -1,0 +1,55 @@
+/* You can add custom styles here. */
+
+// @import "plugins/numbered";
+// @import "plugins/scrollbars";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+body {
+    font-family: "DM Sans", sans-serif;
+    overflow-y: scroll;
+}
+
+.book-menu a {
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    border-left: 3px solid transparent;
+    user-select: none;
+}
+
+.book-menu a.active {
+    background: linear-gradient(90deg, rgba(132, 177, 255, 0.137) 0%, rgba(132, 177, 255, 0) 100%);
+    border-left: 3px solid #84b1ff91;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.book-menu a:not(.active):hover {
+    background-color: rgba(255, 255, 255, 0.034);
+}
+
+.book-menu a.active:hover {
+    background-color: #84b1ff17;
+}
+
+aside nav ul li {
+    margin: 0.4em 0;
+}
+
+#book-search-results {
+    position: absolute;
+    background: var(--body-background);
+    width: 100%;
+    z-index: 20;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    border-radius: 8px;
+    transform: translateY(4px);
+}
+
+#book-search-results li {
+    padding: 8px;
+    margin: 0 !important;
+}
+
+img {
+    border-radius: 8px;
+}
