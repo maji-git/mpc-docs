@@ -1,5 +1,5 @@
 ---
-weight: 1
+weight: 2
 title: "Getting Started"
 ---
 
@@ -10,6 +10,10 @@ Let's get started with MultiPlay Core! In this tutorial, we'll be initializing a
 This tutorial assumes that you already created your Godot project.
 
 ## 1. Install MultiPlay Core
+
+First, install the MultiPlay Core library. You can search in the asset library and install it from there.
+
+![AssetLib](./assets/t0.png)
 
 ## 2. Enable MultiPlay Core Plugin
 

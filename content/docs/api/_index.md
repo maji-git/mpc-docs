@@ -1,6 +1,5 @@
 ---
 weight: 12
-bookCollapseSection: true
 bookFlatSection: true
 title: "API"
 ---

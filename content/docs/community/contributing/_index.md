@@ -1,6 +1,5 @@
 ---
 weight: 15
-bookFlatSection: true
 title: "Contributing"
 ---
 

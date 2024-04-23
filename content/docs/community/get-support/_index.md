@@ -1,6 +1,5 @@
 ---
 weight: 14
-bookFlatSection: true
 title: "Get Support"
 ---
 

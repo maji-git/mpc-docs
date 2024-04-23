@@ -35,7 +35,7 @@ enableGitInfo = true
 
 [[menu.after]]
   name = "Godot AssetLib"
-  url = "https://themes.gohugo.io/themes/hugo-book/"
+  url = "https://godotengine.org/asset-library/asset/2889"
   weight = 20
 
 [params]
