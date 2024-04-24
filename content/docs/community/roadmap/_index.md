@@ -8,7 +8,9 @@ title: "Roadmap"
 MultiPlay Core's journey is just starting to begin! Here's the list of what I would love to implement.
 
 ## Main quests
-- [ ] MPAuth - Authenticator, still working on it.
+- [x] [MPAuth](/docs/manual/auth) - Authenticator... is done!
+- [ ] MPTransformSync - Sync node transforms with lerp.
+- [ ] MPMovement - Sync Character2D/3D movement, allowing for user movement input while maintaining server authority.
 - [ ] MPRigidbody - Sync physics state in the network.
 - [ ] MPStartTransform - Spawn position for players.
 - [ ] MPDiscovery - Find available online rooms in the network.
