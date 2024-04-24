@@ -10,9 +10,9 @@ MultiPlay Core offers a variety of different play modes, which you, the develope
 
 {{< columns >}}
 
-<a href="/docs/introduction/mode-system/online">
+<a href="online">
 
-![Online Mode](/docs/introduction/mode-system/online/assets/banner.png)
+![Online Mode](online/assets/banner.png)
 
 ## Online
 For Networked Multiplayer game.
@@ -21,9 +21,9 @@ For Networked Multiplayer game.
 
 <--->
 
-<a href="/docs/introduction/mode-system/one-screen">
+<a href="one-screen">
 
-![One Screen Mode](/docs/introduction/mode-system/one-screen/assets/banner.png)
+![One Screen Mode](one-screen/assets/banner.png)
 
 ## One Screen
 Connect multiple controllers to play on a single screen.
@@ -35,9 +35,9 @@ Connect multiple controllers to play on a single screen.
 
 {{< columns >}}
 
-<a href="/docs/introduction/mode-system/online">
+<a href="swap">
 
-![Swap Mode](/docs/introduction/mode-system/swap/assets/banner.png)
+![Swap Mode](swap/assets/banner.png)
 
 ## Swap
 For a single player controlling multiple nodes.
@@ -46,9 +46,9 @@ For a single player controlling multiple nodes.
 
 <--->
 
-<a href="/docs/introduction/mode-system/solo">
+<a href="solo">
 
-![Solo](/docs/introduction/mode-system/solo/assets/banner.png)
+![Solo](solo/assets/banner.png)
 
 ## Solo
 Just single-player, all alone.

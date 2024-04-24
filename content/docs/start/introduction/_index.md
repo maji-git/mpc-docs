@@ -1,6 +1,8 @@
 ---
 weight: 1
 title: "Introduction"
+aliases:
+- /docs/introduction/
 ---
 
 # Introduction to MultiPlay Core!
