@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiPlay Core</title>
+
+    {{ partial "partials/docs/html-head.html" . }}
+
+    <style>
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .book-btn {
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .more-links {
+            opacity: 0.7;
+        }
+
+        .more-links a::before {
+            content: "•";
+            opacity: 0.5;
+            margin-left: 6px;
+            margin-right: 6px;
+        }
+
+        .more-links a:nth-child(1)::before {
+            content: "";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="icons/logo-text.svg" height="320" alt="">
+
+        <p>Create Godot Multiplayer games ready for network, local play and more!</p>
+
+        <div class="markdown">
+            <a class="book-btn" role="button" href="/docs">Get Started!</a>
+        </div>
+
+        <div class="more-links">
+            <a href="https://godotengine.org/asset-library/asset/2889">AssetLib</a>
+            <a href="/docs/demo">Demos</a>
+            <a href="https://github.com/maji-git/multiplay-core">Github</a>
+            <a href="/docs/community/get-support/">Support</a>
+        </div>
+    </div>
+</body>
+
+</html>
