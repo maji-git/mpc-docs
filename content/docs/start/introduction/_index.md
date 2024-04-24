@@ -20,7 +20,11 @@ MultiPlay Core is currently only tested in Godot v4.2^, and is __not__ compatibl
 {{< /hint >}}
 
 
-Welcome to the documentation for MultiPlay Core! MultiPlay Core is a Godot Multiplayer Framework. Designed to make multiplayer easier, and meet user's preferences on multiplayer games!
+Welcome to the documentation for MultiPlay Core! MultiPlay Core is a **Godot Multiplayer Framework**. Designed to make multiplayer easier, and meet user's preferences on multiplayer games! Some of the key features include:
+
+- Multiple play mode with minimal code.
+- Simplified API for general-purpose uses.
+- Allow for user data when joining in. 
 
 In this documentation/API. "MultiPlay Core" might be referred to as "MultiPlay", "MP" or "MPC" instead.
 
@@ -31,7 +35,7 @@ MultiPlay comes with multiple multiplayer modes built-in. Including:
 - Swap
 - Solo
 
-For more information, see [Play Modes](mode-system) 
+For more information, see [Play Modes](../mode-system) 
 
 
 ## Node Structure
@@ -51,4 +55,4 @@ When dealing with the input system. You can specify your own input actions in Go
 
 MultiPlay's input system turns the input action into its input action. Each behaves differently according to the play mode. For more information, check the docs of each play mode to see how they behave.
 
-For more information, see [Input System](input-system) 
+For more information, see [Input System](../input-system) 
