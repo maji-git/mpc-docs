@@ -30,6 +30,10 @@ Add `MultiPlayCore` Node to your root node.
 
 ![Add Child Node > MultiPlayCore](./assets/t2.png)
 
+{{< hint warning >}}
+If creating the node doesn't work, you'll need to manually restart the editor.
+{{< /hint >}}
+
 ## 4. Set Godot Editor to run multiple instances.
 To test networking, go to Debug > Run Multiple Instances > Choose how many instances you like.
 
