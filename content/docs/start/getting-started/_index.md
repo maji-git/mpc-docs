@@ -34,12 +34,15 @@ Add `MultiPlayCore` Node to your root node.
 If creating the node doesn't work, you'll need to manually restart the editor.
 {{< /hint >}}
 
-## 4. Set Godot Editor to run multiple instances.
+## 4. Insert Network Protocol
+For MultiPlay Core to work, you'll need to insert one of the network protocol nodes to the Multiplay Core node. Search up "NetProtocol" then insert your preferred protocol.
+
+## 5. Set Godot Editor to run multiple instances.
 To test networking, go to Debug > Run Multiple Instances > Choose how many instances you like.
 
 ![Debug > Run Multiple Instances](./assets/t3.png)
 
-## 5. Run the project
+## 6. Run the project
 Now with all that, you can run the project! After pressing run, the debug menu will appear on two windows. From there you can try different modes. For online play, press "Host + Act Client" on one window. Press "Connect" on another window, and there you have it!
 
 ![Running the project](./assets/t4.png)

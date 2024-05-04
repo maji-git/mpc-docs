@@ -9,6 +9,15 @@ title: "Online"
 
 This mode allows for networked multiplayer games. Players can connect to the server from different devices.
 
+## Online mode URL
+When connecting to online mode, it'll require a connection URL. Which syntax contains:
+
+```
+<HOSTNAME>:<PORT(Optional)>/<PATH(Optional)>
+```
+
+You don't have to specify the protocol. As the protocol is automatically assigned. 
+
 ## Roles in Online Mode
 
 Roles of online mode include:
@@ -35,7 +44,7 @@ The client can send two types of data when joining, which include:
 - **Credentials Data** - Private data about the player, this is only used once and is not exposed to anyone on the server.
 
 {{< hint info >}}
-**About Auth...**  
+**About Authentication...**  
 Authentication is optional. If there are no authenticators assigned, then credentials data is not really needed.
 {{< /hint >}}
 
