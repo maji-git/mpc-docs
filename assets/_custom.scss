@@ -62,3 +62,12 @@ img {
 h2 .class-icon {
     height: 2rem;
 }
+
+.property-title {
+    font-family: roboto mono,monospace;
+    line-height: 1.5 !important;
+}
+
+.method-arg {
+    opacity: 0.8;
+}

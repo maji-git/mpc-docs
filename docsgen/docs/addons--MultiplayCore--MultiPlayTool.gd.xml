@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="&quot;addons/MultiplayCore/MultiPlayTool.gd&quot;" inherits="EditorPlugin">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_enter_tree">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_exit_tree">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_firstrun_restart_editor">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_toolmenu_pressed">
+			<return type="void" />
+			<param index="0" name="id" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="get_icon">
+			<return type="Variant" />
+			<param index="0" name="n" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="open_update_popup">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="run_devscript">
+			<return type="void" />
+			<param index="0" name="script" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="set_firstrun">
+			<return type="void" />
+			<param index="0" name="to" type="Variant" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<constants>
+		<constant name="RESTART_POPUP" value="&lt;Object&gt;">
+		</constant>
+		<constant name="WELCOME_POPUP" value="&lt;Object&gt;">
+		</constant>
+		<constant name="UPDATE_POPUP" value="&lt;Object&gt;">
+		</constant>
+	</constants>
+</class>
