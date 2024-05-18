@@ -15,8 +15,6 @@ Here's the template for network protocol implementation:
 @tool
 extends MPNetProtocolBase
 
-var net_protocols = []
-
 ## Host function
 func host(port, bind_ip, max_players) -> MultiplayerPeer:
     # your logic

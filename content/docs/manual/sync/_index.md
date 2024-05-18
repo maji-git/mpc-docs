@@ -33,4 +33,4 @@ More info [here](https://docs.godotengine.org/en/stable/tutorials/networking/hig
 
 ## Using MultiPlay's Synchronizers
 
-MultiPlay Core also comes with its own synchronizers for specific uses, you can read about it more in the [components category](/docs/manual/components/anim-sync).
+MultiPlay Core also comes with its own synchronizers for specific uses, you can read about it more in the [synchronizers category](/docs/manual/synchronizers/anim-sync).

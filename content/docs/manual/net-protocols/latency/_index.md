@@ -5,7 +5,7 @@ title: "Latency"
 
 # Latency Network Protocol
 
-Latency Network Protocol is a protocol used for **debugging purposes**. You can specify the simulated latency/loss in it's properties.
+Latency Network Protocol is a protocol based on [ENet Protocol](../enet). Made for **debugging purposes**. You can specify the simulated latency/loss in it's properties.
 
 ![Properties](assets/t1.png)
 

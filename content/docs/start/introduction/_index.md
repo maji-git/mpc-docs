@@ -16,7 +16,7 @@ MultiPlay Core is currently in its very early state. While you can try experimen
 
 {{< hint warning >}}
 **Check Godot Versions!**  
-MultiPlay Core is currently only tested in Godot v4.2^, and is __not__ compatible with Godot v3.x
+MultiPlay Core is currently only available for Godot v4.2^, and is __not__ compatible with Godot v3.x
 {{< /hint >}}
 
 
