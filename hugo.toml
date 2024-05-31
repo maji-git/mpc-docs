@@ -10,8 +10,9 @@ enableGitInfo = true
 
 # Needed for mermaid/katex shortcodes
 [markup]
-[markup.goldmark.renderer]
-  unsafe = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [markup.tableOfContents]
   startLevel = 1
