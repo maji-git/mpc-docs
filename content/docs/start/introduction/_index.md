@@ -2,6 +2,7 @@
 weight: 1
 title: "Introduction"
 aliases:
+- /docs/
 - /docs/introduction/
 ---
 
