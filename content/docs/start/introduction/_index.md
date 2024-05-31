@@ -2,6 +2,7 @@
 weight: 1
 title: "Introduction"
 aliases:
+- /docs/
 - /docs/introduction/
 ---
 
@@ -10,13 +11,8 @@ aliases:
 ![Banner](assets/banner.png)
 
 {{< hint warning >}}
-**Bugs Ahead!**  
-MultiPlay Core is currently in its very early state. While you can try experimenting with it, it's not yet ready for production.
-{{< /hint >}}
-
-{{< hint warning >}}
 **Check Godot Versions!**  
-MultiPlay Core is currently only tested in Godot v4.2^, and is __not__ compatible with Godot v3.x
+MultiPlay Core is currently only available for Godot v4.2^, and is __not__ compatible with Godot v3.x
 {{< /hint >}}
 
 

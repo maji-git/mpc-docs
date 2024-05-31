@@ -56,8 +56,50 @@ img {
 
 .class-icon {
     height: 1rem;
+    border-radius: 0;
 }
 
 h2 .class-icon {
     height: 2rem;
+}
+
+.property-title {
+    font-family: roboto mono, monospace;
+    line-height: 1.5 !important;
+}
+
+.method-arg {
+    opacity: 0.8;
+}
+
+.book-section-flat>span {
+    font-weight: 400;
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--body-background);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #6d7996;
+    border: solid 3px var(--body-background);
+    border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #59637a;
+}
+
+.book-menu .book-menu-content {
+    overflow-y: scroll;
 }

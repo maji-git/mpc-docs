@@ -1,7 +1,8 @@
 ---
-weight: 5
-bookFlatSection: true
-title: "Demo"
+weight: 1
+title: "Demo Projects"
+aliases:
+- /docs/demo
 ---
 
 # Demo Projects

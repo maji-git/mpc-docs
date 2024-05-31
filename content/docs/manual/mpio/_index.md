@@ -1,11 +1,9 @@
 ---
-weight: 3
+weight: 30
 title: "Using MPIO"
 ---
 
 # Using the MPIO
-
-![Banner](assets/banner.png)
 
 MultiPlay has a global singleton which is used to store global variables and for debugging purposes. 
 

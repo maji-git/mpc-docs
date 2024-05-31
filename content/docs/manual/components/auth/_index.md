@@ -1,9 +1,9 @@
 ---
 weight: 2
-title: "Using Authenticator"
+title: "Authenticator"
 ---
 
-# Using the Authenticator
+# MultiPlay Authenticator
 
 ![Banner](assets/banner.png)
 

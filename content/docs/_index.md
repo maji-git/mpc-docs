@@ -1,1 +1,3 @@
-<meta http-equiv="refresh" content="0; url=start/introduction">
+Redirecting...
+
+{{< redirect "start/introduction" >}}
