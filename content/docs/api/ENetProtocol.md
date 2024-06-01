@@ -14,6 +14,13 @@ title: ENetProtocol
 
 | Type | Name | Default |
 |---|---|---|
+|<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/int.svg" class="class-icon" alt=""> [`int`](https://docs.godotengine.org/en/stable/classes/class_int.html)|[bandwidth_in_limit](/docs/api/ENetProtocol#bandwidth_in_limit)|0|
+|<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/int.svg" class="class-icon" alt=""> [`int`](https://docs.godotengine.org/en/stable/classes/class_int.html)|[bandwidth_out_limit](/docs/api/ENetProtocol#bandwidth_out_limit)|0|
+|<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/int.svg" class="class-icon" alt=""> [`int`](https://docs.godotengine.org/en/stable/classes/class_int.html)|[compression_mode](/docs/api/ENetProtocol#compression_mode)|3|
+|<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Variant.svg" class="class-icon" alt=""> [`Variant`](https://docs.godotengine.org/en/stable/classes/class_variant.html)|[role](/docs/api/ENetProtocol#role)|""|
+|<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/bool.svg" class="class-icon" alt=""> [`bool`](https://docs.godotengine.org/en/stable/classes/class_bool.html)|[secure](/docs/api/ENetProtocol#secure)||
+|<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/CryptoKey.svg" class="class-icon" alt=""> [`CryptoKey`](https://docs.godotengine.org/en/stable/classes/class_cryptokey.html)|[server_private_key](/docs/api/ENetProtocol#server_private_key)||
+|<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/X509Certificate.svg" class="class-icon" alt=""> [`X509Certificate`](https://docs.godotengine.org/en/stable/classes/class_x509certificate.html)|[ssl_certificate](/docs/api/ENetProtocol#ssl_certificate)||
 
 
 ## Methods
@@ -28,8 +35,71 @@ title: ENetProtocol
 
 
 
+## Property Descriptions
+
+<h3 class="property-title" id="bandwidth_in_limit"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/int.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_int.html"><code>int</code></a> bandwidth_in_limit </h3>
+
+- Default: `0`
 
 
+
+Bandwidth In Limit
+
+---
+<h3 class="property-title" id="bandwidth_out_limit"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/int.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_int.html"><code>int</code></a> bandwidth_out_limit </h3>
+
+- Default: `0`
+
+
+
+Bandwidth Out Limit
+
+---
+<h3 class="property-title" id="compression_mode"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/int.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_int.html"><code>int</code></a> compression_mode </h3>
+
+- Default: `3`
+
+
+
+Set ENet host compression mode
+
+---
+<h3 class="property-title" id="role"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Variant.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_variant.html"><code>Variant</code></a> role </h3>
+
+- Default: `""`
+
+
+
+There's currently no description for this property.
+
+---
+<h3 class="property-title" id="secure"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/bool.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_bool.html"><code>bool</code></a> secure </h3>
+
+- Default: `none`
+
+
+
+Specify if you needs encryption in your ENet
+
+---
+<h3 class="property-title" id="server_private_key"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/CryptoKey.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_cryptokey.html"><code>CryptoKey</code></a> server_private_key </h3>
+
+- Default: `none`
+
+
+
+Secure Private key for server
+
+---
+<h3 class="property-title" id="ssl_certificate"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/X509Certificate.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_x509certificate.html"><code>X509Certificate</code></a> ssl_certificate </h3>
+
+- Default: `none`
+
+
+
+Trusted SSL certificate for server & client
+
+---
 
 
 ## Method Descriptions

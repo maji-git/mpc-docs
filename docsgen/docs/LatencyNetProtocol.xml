@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<class name="LatencyNetProtocol" inherits="MPNetProtocolBase">
+<class name="LatencyNetProtocol" inherits="ENetProtocol">
 	<brief_description>
 		Network Protocol for simulating network latency, based on ENet/UDP. Intended for debuging purposes.
 	</brief_description>

@@ -45,6 +45,8 @@
 		</member>
 		<member name="mpp" type="MPPlayer" setter="" getter="" default="&lt;unknown&gt;">
 		</member>
+		<member name="on_ground" type="Variant" setter="" getter="" default="false">
+		</member>
 	</members>
 	<constants>
 		<constant name="SPEED" value="300.0">

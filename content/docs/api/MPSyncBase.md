@@ -20,6 +20,7 @@ title: MPSyncBase
 
 | Returns Type | Syntax |
 |---|---|
+|<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Variant.svg" class="class-icon" alt=""> [`Variant`](https://docs.godotengine.org/en/stable/classes/class_variant.html)|[check_is_local](/docs/api/MPSyncBase#check_is_local) ( )|
 |<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Variant.svg" class="class-icon" alt=""> [`Variant`](https://docs.godotengine.org/en/stable/classes/class_variant.html)|[check_recv_permission](/docs/api/MPSyncBase#check_recv_permission) ( )|
 |<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Variant.svg" class="class-icon" alt=""> [`Variant`](https://docs.godotengine.org/en/stable/classes/class_variant.html)|[check_send_permission](/docs/api/MPSyncBase#check_send_permission) ( )|
 |<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Variant.svg" class="class-icon" alt=""> [`Variant`](https://docs.godotengine.org/en/stable/classes/class_variant.html)|[should_sync](/docs/api/MPSyncBase#should_sync) ( )|
@@ -35,6 +36,13 @@ title: MPSyncBase
 
 ## Method Descriptions
 
+<h3 class="property-title" id="check_is_local"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Variant.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_variant.html"><code>Variant</code></a> check_is_local ( ) </h3>
+
+
+
+If this node is local to current multiplayer peer
+
+---
 <h3 class="property-title" id="check_recv_permission"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Variant.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_variant.html"><code>Variant</code></a> check_recv_permission ( ) </h3>
 
 

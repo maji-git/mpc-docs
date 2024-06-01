@@ -16,17 +16,20 @@ title: MultiPlayCore
 |---|---|---|
 |<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/bool.svg" class="class-icon" alt=""> [`bool`](https://docs.godotengine.org/en/stable/classes/class_bool.html)|[assign_client_authority](/docs/api/MultiPlayCore#assign_client_authority)|true|
 |<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/String.svg" class="class-icon" alt=""> [`String`](https://docs.godotengine.org/en/stable/classes/class_string.html)|[bind_address](/docs/api/MultiPlayCore#bind_address)|"*"|
+|<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/int.svg" class="class-icon" alt=""> [`int`](https://docs.godotengine.org/en/stable/classes/class_int.html)|[connect_timeout_ms](/docs/api/MultiPlayCore#connect_timeout_ms)|50000|
 |<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Node.svg" class="class-icon" alt=""> [`Node`](https://docs.godotengine.org/en/stable/classes/class_node.html)|[current_scene](/docs/api/MultiPlayCore#current_scene)|null|
 |<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/int.svg" class="class-icon" alt=""> [`int`](https://docs.godotengine.org/en/stable/classes/class_int.html)|[current_swap_index](/docs/api/MultiPlayCore#current_swap_index)|0|
 |<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/bool.svg" class="class-icon" alt=""> [`bool`](https://docs.godotengine.org/en/stable/classes/class_bool.html)|[debug_gui_enabled](/docs/api/MultiPlayCore#debug_gui_enabled)|true|
+|<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Variant.svg" class="class-icon" alt=""> [`Variant`](https://docs.godotengine.org/en/stable/classes/class_variant.html)|[debug_status_txt](/docs/api/MultiPlayCore#debug_status_txt)|""|
 |<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/PackedScene.svg" class="class-icon" alt=""> [`PackedScene`](https://docs.godotengine.org/en/stable/classes/class_packedscene.html)|[first_scene](/docs/api/MultiPlayCore#first_scene)||
 |<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/bool.svg" class="class-icon" alt=""> [`bool`](https://docs.godotengine.org/en/stable/classes/class_bool.html)|[is_server](/docs/api/MultiPlayCore#is_server)|false|
 |<img src="/icons/MPPlayer.svg" class="class-icon" alt=""> [`MPPlayer`](/docs/api/MPPlayer)|[local_player](/docs/api/MultiPlayCore#local_player)|null|
-|<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Variant.svg" class="class-icon" alt=""> [`Variant`](https://docs.godotengine.org/en/stable/classes/class_variant.html)|[max_players](/docs/api/MultiPlayCore#max_players)|2|
+|<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/int.svg" class="class-icon" alt=""> [`int`](https://docs.godotengine.org/en/stable/classes/class_int.html)|[max_players](/docs/api/MultiPlayCore#max_players)|2|
 |<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/int.svg" class="class-icon" alt=""> [`int`](https://docs.godotengine.org/en/stable/classes/class_int.html)|[mode](/docs/api/MultiPlayCore#mode)|0|
 |<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/bool.svg" class="class-icon" alt=""> [`bool`](https://docs.godotengine.org/en/stable/classes/class_bool.html)|[online_connected](/docs/api/MultiPlayCore#online_connected)|false|
 |<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/MultiplayerPeer.svg" class="class-icon" alt=""> [`MultiplayerPeer`](https://docs.godotengine.org/en/stable/classes/class_multiplayerpeer.html)|[online_peer](/docs/api/MultiPlayCore#online_peer)|null|
 |<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/int.svg" class="class-icon" alt=""> [`int`](https://docs.godotengine.org/en/stable/classes/class_int.html)|[player_count](/docs/api/MultiPlayCore#player_count)|0|
+|<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/bool.svg" class="class-icon" alt=""> [`bool`](https://docs.godotengine.org/en/stable/classes/class_bool.html)|[player_node_ready](/docs/api/MultiPlayCore#player_node_ready)|false|
 |<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/PackedScene.svg" class="class-icon" alt=""> [`PackedScene`](https://docs.godotengine.org/en/stable/classes/class_packedscene.html)|[player_scene](/docs/api/MultiPlayCore#player_scene)||
 |<img src="/icons/MPPlayersCollection.svg" class="class-icon" alt=""> [`MPPlayersCollection`](/docs/api/MPPlayersCollection)|[players](/docs/api/MultiPlayCore#players)||
 |<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/int.svg" class="class-icon" alt=""> [`int`](https://docs.godotengine.org/en/stable/classes/class_int.html)|[port](/docs/api/MultiPlayCore#port)|4200|
@@ -82,19 +85,43 @@ Solo, self explanatory
 - UNKNOWN = 0
 
 
-There's currently no description for this enum.
+Unknown reason
 
 ---
 - SERVER_FULL = 1
 
 
-There's currently no description for this enum.
+The server's full
 
 ---
 - AUTH_FAILED = 2
 
 
-There's currently no description for this enum.
+Authentication Failure
+
+---
+- TIMEOUT = 3
+
+
+Connection timed out
+
+---
+- CONNECTION_FAILURE = 4
+
+
+Failure during connection
+
+---
+- INVALID_HANDSHAKE = 5
+
+
+Internal handshake data cannot be readed by the server
+
+---
+- VERSION_MISMATCH = 6
+
+
+Client's Multiplay version is not compatible with the server
 
 ---
 
@@ -117,6 +144,15 @@ Should Client authority be assigned automatically?
 
 
 Which ip to bind on in online game host.
+
+---
+<h3 class="property-title" id="connect_timeout_ms"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/int.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_int.html"><code>int</code></a> connect_timeout_ms </h3>
+
+- Default: `50000`
+
+
+
+Time in milliseconds before timing out the user.
 
 ---
 <h3 class="property-title" id="current_scene"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Node.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_node.html"><code>Node</code></a> current_scene </h3>
@@ -146,6 +182,15 @@ Current swap index, Swap mode only.
 Enable Debug UI
 
 ---
+<h3 class="property-title" id="debug_status_txt"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Variant.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_variant.html"><code>Variant</code></a> debug_status_txt </h3>
+
+- Default: `""`
+
+
+
+Debug Status
+
+---
 <h3 class="property-title" id="first_scene"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/PackedScene.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_packedscene.html"><code>PackedScene</code></a> first_scene </h3>
 
 - Default: `none`
@@ -173,7 +218,7 @@ Determines if MultiPlay is running as server
 The local player node
 
 ---
-<h3 class="property-title" id="max_players"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Variant.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_variant.html"><code>Variant</code></a> max_players </h3>
+<h3 class="property-title" id="max_players"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/int.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_int.html"><code>int</code></a> max_players </h3>
 
 - Default: `2`
 
@@ -197,7 +242,7 @@ Current playmode
 
 
 
-If conneccted in online mode
+If connected in online mode
 
 ---
 <h3 class="property-title" id="online_peer"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/MultiplayerPeer.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_multiplayerpeer.html"><code>MultiplayerPeer</code></a> online_peer </h3>
@@ -216,6 +261,15 @@ MultiplayerPeer for the game
 
 
 Current player count
+
+---
+<h3 class="property-title" id="player_node_ready"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/bool.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_bool.html"><code>bool</code></a> player_node_ready </h3>
+
+- Default: `false`
+
+
+
+If player node is ready
 
 ---
 <h3 class="property-title" id="player_scene"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/PackedScene.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_packedscene.html"><code>PackedScene</code></a> player_scene </h3>

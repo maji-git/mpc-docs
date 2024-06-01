@@ -40,6 +40,8 @@
 		</method>
 	</methods>
 	<members>
+		<member name="current_version" type="Label" setter="" getter="">
+		</member>
 		<member name="download_commit_hash" type="Variant" setter="" getter="" default="&quot;&quot;">
 		</member>
 		<member name="download_url" type="Variant" setter="" getter="" default="&quot;&quot;">

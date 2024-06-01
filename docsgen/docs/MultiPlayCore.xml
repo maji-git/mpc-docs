@@ -14,6 +14,17 @@
 			<description>
 			</description>
 		</method>
+		<method name="_check_join_internal">
+			<return type="Variant" />
+			<param index="0" name="handshake_data" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_client_connect_failed">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
 		<method name="_client_connected">
 			<return type="void" />
 			<description>
@@ -21,6 +32,13 @@
 		</method>
 		<method name="_client_disconnected">
 			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_debugger_msg_capture">
+			<return type="Variant" />
+			<param index="0" name="msg" type="Variant" />
+			<param index="1" name="data" type="Variant" />
 			<description>
 			</description>
 		</method>
@@ -55,8 +73,15 @@
 		</method>
 		<method name="_join_handshake">
 			<return type="void" />
-			<param index="0" name="handshake_data" type="Variant" />
+			<param index="0" name="handshake_data" type="Dictionary" />
 			<param index="1" name="credentials_data" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_kick_player_handshake">
+			<return type="void" />
+			<param index="0" name="plr_id" type="int" />
+			<param index="1" name="reason" type="int" enum="MultiPlayCore.ConnectionError" />
 			<description>
 			</description>
 		</method>
@@ -88,6 +113,17 @@
 		<method name="_network_player_disconnected">
 			<return type="void" />
 			<param index="0" name="player_id" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_on_local_disconnected">
+			<return type="void" />
+			<param index="0" name="reason" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_on_local_player_ready">
+			<return type="void" />
 			<description>
 			</description>
 		</method>
@@ -219,6 +255,10 @@
 		</method>
 	</methods>
 	<members>
+		<member name="_debug_bootui" type="Variant" setter="" getter="" default="null">
+		</member>
+		<member name="_debug_join_address" type="Variant" setter="" getter="" default="&quot;&quot;">
+		</member>
 		<member name="_extensions" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
 		</member>
 		<member name="_join_credentials_data" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
@@ -237,6 +277,9 @@
 		<member name="bind_address" type="String" setter="" getter="" default="&quot;*&quot;">
 			Which ip to bind on in online game host.
 		</member>
+		<member name="connect_timeout_ms" type="int" setter="" getter="" default="50000">
+			Time in milliseconds before timing out the user.
+		</member>
 		<member name="current_scene" type="Node" setter="" getter="" default="null">
 			Current scene node
 		</member>
@@ -245,6 +288,9 @@
 		</member>
 		<member name="debug_gui_enabled" type="bool" setter="" getter="" default="true">
 			Enable Debug UI
+		</member>
+		<member name="debug_status_txt" type="Variant" setter="" getter="" default="&quot;&quot;">
+			Debug Status
 		</member>
 		<member name="first_scene" type="PackedScene" setter="" getter="">
 			The first scene to load
@@ -255,20 +301,23 @@
 		<member name="local_player" type="MPPlayer" setter="" getter="" default="null">
 			The local player node
 		</member>
-		<member name="max_players" type="Variant" setter="" getter="" default="2">
+		<member name="max_players" type="int" setter="" getter="" default="2">
 			Max players for the game.
 		</member>
 		<member name="mode" type="int" setter="" getter="" enum="MultiPlayCore.PlayMode" default="0">
 			Current playmode
 		</member>
 		<member name="online_connected" type="bool" setter="" getter="" default="false">
-			If conneccted in online mode
+			If connected in online mode
 		</member>
 		<member name="online_peer" type="MultiplayerPeer" setter="" getter="" default="null">
 			MultiplayerPeer for the game
 		</member>
 		<member name="player_count" type="int" setter="" getter="" default="0">
 			Current player count
+		</member>
+		<member name="player_node_ready" type="bool" setter="" getter="" default="false">
+			If player node is ready
 		</member>
 		<member name="player_scene" type="PackedScene" setter="" getter="">
 			Your own template player scene.
@@ -331,8 +380,11 @@
 		</signal>
 	</signals>
 	<constants>
-		<constant name="MP_VERSION" value="&quot;0.2.4-dev-np&quot;">
+		<constant name="MP_VERSION" value="&quot;1.0.0&quot;">
 			MultiPlay Core Version
+		</constant>
+		<constant name="MP_VERSION_NAME" value="&quot;Envelope Puppet&quot;">
+			MultiPlay Core Version Name
 		</constant>
 		<constant name="Online" value="0" enum="PlayMode">
 			Network enabled multiplayer
@@ -347,10 +399,25 @@
 			Solo, self explanatory
 		</constant>
 		<constant name="UNKNOWN" value="0" enum="ConnectionError">
+			Unknown reason
 		</constant>
 		<constant name="SERVER_FULL" value="1" enum="ConnectionError">
+			The server's full
 		</constant>
 		<constant name="AUTH_FAILED" value="2" enum="ConnectionError">
+			Authentication Failure
+		</constant>
+		<constant name="TIMEOUT" value="3" enum="ConnectionError">
+			Connection timed out
+		</constant>
+		<constant name="CONNECTION_FAILURE" value="4" enum="ConnectionError">
+			Failure during connection
+		</constant>
+		<constant name="INVALID_HANDSHAKE" value="5" enum="ConnectionError">
+			Internal handshake data cannot be readed by the server
+		</constant>
+		<constant name="VERSION_MISMATCH" value="6" enum="ConnectionError">
+			Client's Multiplay version is not compatible with the server
 		</constant>
 	</constants>
 </class>
