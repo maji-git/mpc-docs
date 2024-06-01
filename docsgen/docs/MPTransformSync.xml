@@ -33,6 +33,14 @@
 			<description>
 			</description>
 		</method>
+		<method name="_recv_transform_reliable">
+			<return type="void" />
+			<param index="0" name="field" type="String" />
+			<param index="1" name="set_to" type="Variant" default="null" />
+			<param index="2" name="is_server_cmd" type="Variant" default="false" />
+			<description>
+			</description>
+		</method>
 		<method name="set_position_2d">
 			<return type="void" />
 			<param index="0" name="to" type="Vector2" />

@@ -64,6 +64,19 @@
 			<description>
 			</description>
 		</method>
+		<method name="get_or_empty">
+			<return type="Variant" />
+			<param index="0" name="data" type="Dictionary" />
+			<param index="1" name="field" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="parse_json_or_none">
+			<return type="Variant" />
+			<param index="0" name="data" type="Variant" />
+			<description>
+			</description>
+		</method>
 		<method name="save_debug_cache">
 			<return type="void" />
 			<description>
@@ -82,15 +95,27 @@
 		</member>
 		<member name="connect_address" type="LineEdit" setter="" getter="">
 		</member>
+		<member name="delta_step" type="Variant" setter="" getter="" default="0">
+		</member>
 		<member name="join_address" type="Variant" setter="" getter="" default="&quot;ws://localhost:4200&quot;">
 		</member>
 		<member name="mpc" type="MultiPlayCore" setter="" getter="">
 		</member>
 		<member name="payload_input" type="TextEdit" setter="" getter="">
 		</member>
+		<member name="s_array" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
 		<member name="status_text" type="Label" setter="" getter="">
 		</member>
 		<member name="status_ui" type="Control" setter="" getter="">
 		</member>
+		<member name="worst_ping" type="Variant" setter="" getter="" default="0">
+		</member>
 	</members>
+	<constants>
+		<constant name="DELTA_STEP_MAX" value="100">
+		</constant>
+		<constant name="STRING_ARRAY_SLOT" value="6">
+		</constant>
+	</constants>
 </class>

@@ -39,7 +39,7 @@ title: WebSocketNetProtocol
 
 
 
-There's currently no description for this property.
+Specify if you needs encryption in your web socket
 
 ---
 <h3 class="property-title" id="server_private_key"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/CryptoKey.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_cryptokey.html"><code>CryptoKey</code></a> server_private_key </h3>
@@ -48,7 +48,7 @@ There's currently no description for this property.
 
 
 
-There's currently no description for this property.
+Secure Private key for server
 
 ---
 <h3 class="property-title" id="ssl_certificate"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/X509Certificate.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_x509certificate.html"><code>X509Certificate</code></a> ssl_certificate </h3>
@@ -57,7 +57,7 @@ There's currently no description for this property.
 
 
 
-There's currently no description for this property.
+Trusted SSL certificate for server & client
 
 ---
 

@@ -1,3 +1,5 @@
+// godot --doctool --gdscript-docs .
+
 const fs = require("fs")
 const path = require("path")
 const { XMLParser, XMLBuilder, XMLValidator } = require("fast-xml-parser");

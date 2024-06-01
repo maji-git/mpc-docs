@@ -27,10 +27,13 @@
 	</methods>
 	<members>
 		<member name="secure" type="bool" setter="" getter="">
+			Specify if you needs encryption in your web socket
 		</member>
 		<member name="server_private_key" type="CryptoKey" setter="" getter="">
+			Secure Private key for server
 		</member>
 		<member name="ssl_certificate" type="X509Certificate" setter="" getter="">
+			Trusted SSL certificate for server &amp; client
 		</member>
 	</members>
 </class>
