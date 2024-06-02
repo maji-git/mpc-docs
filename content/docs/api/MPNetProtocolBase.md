@@ -14,6 +14,7 @@ title: MPNetProtocolBase
 
 | Type | Name | Default |
 |---|---|---|
+|<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Variant.svg" class="class-icon" alt=""> [`Variant`](https://docs.godotengine.org/en/stable/classes/class_variant.html)|[net_protocols](/docs/api/MPNetProtocolBase#net_protocols)|<unknown>|
 
 
 ## Methods
@@ -28,8 +29,17 @@ title: MPNetProtocolBase
 
 
 
+## Property Descriptions
+
+<h3 class="property-title" id="net_protocols"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Variant.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_variant.html"><code>Variant</code></a> net_protocols </h3>
+
+- Default: `<unknown>`
 
 
+
+There's currently no description for this property.
+
+---
 
 
 ## Method Descriptions

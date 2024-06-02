@@ -14,6 +14,7 @@ title: MPExtension
 
 | Type | Name | Default |
 |---|---|---|
+|<img src="/icons/MultiPlayCore.svg" class="class-icon" alt=""> [`MultiPlayCore`](/docs/api/MultiPlayCore)|[mpc](/docs/api/MPExtension#mpc)||
 
 
 ## Methods
@@ -26,8 +27,17 @@ title: MPExtension
 
 
 
+## Property Descriptions
+
+<h3 class="property-title" id="mpc"> <img src="/icons/MultiPlayCore.svg" class="class-icon" alt=""> <a href="/docs/api/MultiPlayCore"><code>MultiPlayCore</code></a> mpc </h3>
+
+- Default: `none`
 
 
+
+Main MultiPlayCore node
+
+---
 
 
 

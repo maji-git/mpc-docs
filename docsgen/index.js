@@ -72,19 +72,25 @@ setTimeout(() => {
 
             if (obj.class.members) {
 
-                if (Symbol.iterator in Object(obj.class.members.member)) {
-                    for (const m of obj.class.members.member) {
-                        // Igore private variables
-                        if (m["@_name"].startsWith("_")) {
-                            continue
-                        }
-                        propertyTable += `|${makeClassLink(m["@_type"] ?? "Variant")}|[${m["@_name"]}](${apiURLBase}${className}#${m["@_name"].toLowerCase()})|${m["@_default"] ?? ""}|\n`
+                let arrayMembers = []
 
-                        propertyDesc += `<h3 class="property-title" id="${m["@_name"].toLowerCase()}"> ${makeClassLinkHTML(m["@_type"] ?? "Variant")} ${m["@_name"]} </h3>\n\n`
-                        propertyDesc += `- Default: \`${m["@_default"] ?? "none"}\`\n\n`
-                        propertyDesc += `\n\n${formatText(m["#text"]) ?? "There's currently no description for this property."}`
-                        propertyDesc += `\n\n---\n`
+                if (Symbol.iterator in Object(obj.class.members.member)) {
+                    arrayMembers = obj.class.members.member
+                } else {
+                    arrayMembers = [obj.class.members.member]
+                }
+
+                for (const m of arrayMembers) {
+                    // Igore private variables
+                    if (m["@_name"].startsWith("_")) {
+                        continue
                     }
+                    propertyTable += `|${makeClassLink(m["@_type"] ?? "Variant")}|[${m["@_name"]}](${apiURLBase}${className}#${m["@_name"].toLowerCase()})|${m["@_default"] ?? ""}|\n`
+
+                    propertyDesc += `<h3 class="property-title" id="${m["@_name"].toLowerCase()}"> ${makeClassLinkHTML(m["@_type"] ?? "Variant")} ${m["@_name"]} </h3>\n\n`
+                    propertyDesc += `- Default: \`${m["@_default"] ?? "none"}\`\n\n`
+                    propertyDesc += `\n\n${formatText(m["#text"]) ?? "There's currently no description for this property."}`
+                    propertyDesc += `\n\n---\n`
                 }
             }
 
@@ -95,45 +101,51 @@ setTimeout(() => {
 
             if (obj.class.methods) {
 
+                let arrayMethods = []
+
                 if (Symbol.iterator in Object(obj.class.methods.method)) {
-                    for (const m of obj.class.methods.method) {
-                        // Igore private variables
-                        if (m["@_name"].startsWith("_")) {
-                            continue
-                        }
+                    arrayMethods = obj.class.methods.method
+                } else {
+                    arrayMethods = [obj.class.methods.method]
+                }
 
-                        let paramString = " "
-                        let paramStringDesc = " "
-
-                        if (Symbol.iterator in Object(m.param)) {
-
-                            for (const p of m.param) {
-                                paramString += `${makeClassLinkHTML(p["@_type"])} ${p["@_name"]}, `
-                                paramStringDesc += `${makeClassLinkHTML(p["@_type"], false)} <span class="method-arg">${p["@_name"]}</span>, `
-                            }
-
-                            // remove last colon
-                            paramString = paramString.slice(0, -2) + " "
-                            paramStringDesc = paramStringDesc.slice(0, -2) + " "
-                        }
-
-                        methodTable += `|${makeClassLink(m.return["@_type"]) ?? "void"}|[${m["@_name"]}](${apiURLBase}${className}#${m["@_name"].toLowerCase()}) (${paramString})|\n`
-
-                        methodDesc += `<h3 class="property-title" id="${m["@_name"].toLowerCase()}"> ${makeClassLinkHTML(m.return["@_type"] ?? "Variant")} ${m["@_name"]} (${paramStringDesc}) </h3>\n\n`
-
-                        methodDesc += `\n\n${formatText(m["description"]) ?? "There's currently no description for this method."}`
-                        methodDesc += `\n\n---\n`
-                        /*
-
-                        propertyTable += `|${m["@_type"] ?? "Variant"}|[${m["@_name"]}](/docs/api/${className}#${m["@_type"]?.toLowerCase() ?? "variant"}-${m["@_name"].toLowerCase()})|${m["@_default"] ?? ""}|\n`
-
-                        propertyDesc += `### \`${m["@_type"] ?? "Variant"}\` ${m["@_name"]}\n\n`
-                        propertyDesc += `- Default: \`${m["@_default"] ?? "none"}\`\n\n`
-                        propertyDesc += `\n\n${m["#text"] ?? "There's currently no description for this property."}`
-                        propertyDesc += `\n\n---\n`
-
-                        */
+                for (const m of arrayMethods) {
+                    // Igore private variables
+                    if (m["@_name"].startsWith("_")) {
+                        continue
                     }
+
+                    let paramString = " "
+                    let paramStringDesc = " "
+
+                    if (Symbol.iterator in Object(m.param)) {
+
+                        for (const p of m.param) {
+                            paramString += `${makeClassLinkHTML(p["@_type"])} ${p["@_name"]}, `
+                            paramStringDesc += `${makeClassLinkHTML(p["@_type"], false)} <span class="method-arg">${p["@_name"]}</span>, `
+                        }
+
+                        // remove last colon
+                        paramString = paramString.slice(0, -2) + " "
+                        paramStringDesc = paramStringDesc.slice(0, -2) + " "
+                    }
+
+                    methodTable += `|${makeClassLink(m.return["@_type"]) ?? "void"}|[${m["@_name"]}](${apiURLBase}${className}#${m["@_name"].toLowerCase()}) (${paramString})|\n`
+
+                    methodDesc += `<h3 class="property-title" id="${m["@_name"].toLowerCase()}"> ${makeClassLinkHTML(m.return["@_type"] ?? "Variant")} ${m["@_name"]} (${paramStringDesc}) </h3>\n\n`
+
+                    methodDesc += `\n\n${formatText(m["description"]) ?? "There's currently no description for this method."}`
+                    methodDesc += `\n\n---\n`
+                    /*
+
+                    propertyTable += `|${m["@_type"] ?? "Variant"}|[${m["@_name"]}](/docs/api/${className}#${m["@_type"]?.toLowerCase() ?? "variant"}-${m["@_name"].toLowerCase()})|${m["@_default"] ?? ""}|\n`
+
+                    propertyDesc += `### \`${m["@_type"] ?? "Variant"}\` ${m["@_name"]}\n\n`
+                    propertyDesc += `- Default: \`${m["@_default"] ?? "none"}\`\n\n`
+                    propertyDesc += `\n\n${m["#text"] ?? "There's currently no description for this property."}`
+                    propertyDesc += `\n\n---\n`
+
+                    */
                 }
             }
 
@@ -177,7 +189,7 @@ setTimeout(() => {
 
             }
 
-            for (const [k,v] of Object.entries(enums)) {
+            for (const [k, v] of Object.entries(enums)) {
                 enumDesc += `<h3 class="property-title"> enum ${k}: </h3>\n\n`
 
                 for (const e of v) {

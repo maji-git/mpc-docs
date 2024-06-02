@@ -14,6 +14,7 @@ title: MPPlayersCollection
 
 | Type | Name | Default |
 |---|---|---|
+|<img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Dictionary.svg" class="class-icon" alt=""> [`Dictionary`](https://docs.godotengine.org/en/stable/classes/class_dictionary.html)|[players](/docs/api/MPPlayersCollection#players)|<unknown>|
 
 
 ## Methods
@@ -32,8 +33,17 @@ title: MPPlayersCollection
 
 
 
+## Property Descriptions
+
+<h3 class="property-title" id="players"> <img src="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Dictionary.svg" class="class-icon" alt=""> <a href="https://docs.godotengine.org/en/stable/classes/class_dictionary.html"><code>Dictionary</code></a> players </h3>
+
+- Default: `<unknown>`
 
 
+
+Dictionary containing [MPPlayer]
+
+---
 
 
 ## Method Descriptions
