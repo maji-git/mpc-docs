@@ -2,5 +2,6 @@
     "version": "3",
     "version_string": "1.0.0",
     "godot_version": "4.2",
-    "download_url": "https://github.com/maji-git/multiplay-core/archive/d1d6fd4231fce821fa09ec2c61b0ca4f8632aeeb.zip"
+    "download_url": "https://github.com/maji-git/multiplay-core/archive/d1d6fd4231fce821fa09ec2c61b0ca4f8632aeeb.zip",
+    "download_commit_hash": "d1d6fd4231fce821fa09ec2c61b0ca4f8632aeeb"
 }
