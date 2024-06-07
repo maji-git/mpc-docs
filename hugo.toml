@@ -112,3 +112,12 @@ enableGitInfo = true
   # /!\ This is an experimental feature, might be removed or changed at any time
   # (Optional, experimental, default false) Enables a drop-down menu for translations only if a translation is present.
   BookTranslatedOnly = false
+
+[server]
+  [[server.headers]]
+    for = '/**'
+    [server.headers.values]
+        Cross-Origin-Opener-Policy = "same-origin"
+        Cross-Origin-Embedder-Policy = "require-corp"
+        Policy = ""
+        Connection = "keep-alive"
