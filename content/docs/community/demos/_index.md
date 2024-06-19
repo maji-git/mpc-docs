@@ -18,4 +18,15 @@ Multiplayer 2D Platformer!
 
 </a>
 
+<--->
+
+<a target="_none" href="https://github.com/maji-git/mpc-gui-demo">
+
+![Simple GUI Demo](assets/gui-demo.png)
+
+## Simple GUI Demo
+GUI Demo for host/join
+
+</a>
+
 {{< /columns >}}
