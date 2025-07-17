@@ -18,7 +18,7 @@ MultiPlay Core has its own Asset Library (https://assets.mpc.himaji.xyz/) dedica
 ![Change AssetLib's Site to MultiPlay AssetLib](assets/t2.png)
 
 {{< hint info >}}
-If you don't see MultiPlay AssetLib being listed here. The workaround is to open and close the Editor Settings menu (Editor -> Editor Settings...)
+If you don't see MultiPlay AssetLib being listed here. You may need to restart the editor.
 {{< /hint >}}
 
 And now you can use the asset library like you would do in the normal asset library!
